@@ -6,7 +6,9 @@ Each watch lists two to six https sources on distinct registrable domains. A sou
 
 An empty Statuspage `incidents` array is a positive `operational` reading. An HTML page that yields no grounded incident is "no answer". Silence on a web page is not evidence that the service was up.
 
-Deployment address: **PENDING**. `deploy/address.json` stays pending until an operator deploys it. No deployment was performed from this repository.
+Deployed on GenLayer Studio (studionet):
+[`0x767FdE2e5Fb1d1436c046cdb0A5F8bd891Df71B8`](https://explorer-studio.genlayer.com/address/0x767FdE2e5Fb1d1436c046cdb0A5F8bd891Df71B8).
+The deploying account is `0xEf047a1fEbD27E18CA8EF7Ab2C1f3f91B0d733a3`. Constructor arguments were `172800, 1209600, 3, 86400`. Transaction hashes are in `deploy/address.json`.
 
 ## Consensus
 
@@ -122,7 +124,7 @@ await client.deployContract({
 
 ### Demo writes
 
-`ADDRESS` is not known until deployment. Replace it locally. `START` and `END` are unix seconds. `END` must already be in the past when the transaction runs.
+Replace `ADDRESS` with the studionet address in `deploy/address.json`. `START` and `END` are unix seconds. `END` must already be in the past when the transaction runs.
 
 ```bash
 genlayer write ADDRESS create_watch --args \
@@ -202,7 +204,7 @@ Direct-mode tests mock web and model calls. They do not start GenLayer Studio an
 - Any dissenting successful read abstains, including a single minority source. A source that fails to load is incomplete, not a dissent, until the attempt cap finalizes the abstention.
 - One correction is allowed, and only when every source answers and agrees. A source that is down during the correction attempt leaves the original head in place.
 - Status pages can edit history inside the lookback before the first `observe`. The contract does not witness the incident at the time it happens. It records a later reading of the published feeds, then freezes that reading.
-- No studio, testnet, or mainnet deployment was run for this repository. `deploy/address.json` is `PENDING`.
+- Direct-mode tests mock web and model calls and do not start a multi-validator network. The studionet transactions listed in `deploy/address.json` are live Studio consensus, not those mocks.
 
 ## License
 

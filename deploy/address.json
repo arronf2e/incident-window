@@ -1,6 +1,21 @@
 {
-  "address": "PENDING",
-  "network": "PENDING",
-  "tx": "PENDING",
-  "note": "Not deployed. The coordinator deploys after review. Do not treat this file as a live address."
+  "address": "0x767FdE2e5Fb1d1436c046cdb0A5F8bd891Df71B8",
+  "network": "studionet",
+  "explorer": "https://explorer-studio.genlayer.com/address/0x767FdE2e5Fb1d1436c046cdb0A5F8bd891Df71B8",
+  "deployer": "0xEf047a1fEbD27E18CA8EF7Ab2C1f3f91B0d733a3",
+  "tx": "0x45ed22ce4f598c48082388806a4f9bd42eb13e5caf59074304bfa643167adfdb",
+  "constructor_args": [172800, 1209600, 3, 86400],
+  "example": {
+    "create_watch": "0x5bee2d4deaddf09e5968535e0951b49c29e6772918da68599d93eb5c4c995a01",
+    "observe": "0x9387c79fcc5ca87d7190547bbe8014583a049e4e227fbfbe91ff14361e34fb41",
+    "watch_id": "github-actions",
+    "window_start": 1794427200,
+    "window_end": 1794434400,
+    "observe_result": {
+      "verdict": "abstain",
+      "reason": "incomplete",
+      "status": "retryable"
+    }
+  },
+  "note": "Filled after the studionet deployment and example writes."
 }
