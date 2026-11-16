@@ -1,0 +1,9 @@
+{
+  "name": "incident-window-deploy",
+  "private": true,
+  "type": "module",
+  "description": "Dry-run deploy helper for the IncidentWindow intelligent contract.",
+  "dependencies": {
+    "genlayer-js": "1.1.8"
+  }
+}
